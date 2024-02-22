@@ -13,5 +13,5 @@
 
   tasks:
     - name: create azure vm according to specified variables
-      ansible.bultin.import_role:
+      import_role:
         name: vm-create
