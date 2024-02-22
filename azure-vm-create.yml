@@ -1,0 +1,17 @@
+---
+- hosts: local
+  become: no
+  vars:
+    environment: azure
+    vm_name: test-asnible-vm-name
+    vm_resource_goup_name: my-rg-name
+    vm_admin_password: test123
+    vm_admin_username: asnible
+    vm_image_offer: CentOS
+    vm_image_publisher: OpenLogic
+    vm_image_version: latest 
+
+  tasks:
+    - name: create azure vm according to specified variables
+      ansible.bultin.import_role:
+        name: vm-create

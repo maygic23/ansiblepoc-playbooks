@@ -1,0 +1,4 @@
+---
+- name: create vm on azure
+  import_tasks: create-azure-vm.yml
+  when: {{ environment }} == azure

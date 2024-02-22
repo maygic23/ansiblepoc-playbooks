@@ -1,0 +1,10 @@
+- name: Create azure VM
+  azure_rm_virtualmachine:
+    resource_group: {{ vm_resource_goup_name }}
+    name: {{ vm_name }}
+    admin_username: "{{ vm_admin_username }}"
+    admin_password: "{{ vm_admin_password }}"
+    image:
+      offer: {{ vm_image_offer }}
+      publisher: {{ vm_image_publisher }}
+      version: {{ vm_image_version }}
