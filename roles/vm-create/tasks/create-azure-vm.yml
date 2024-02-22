@@ -1,5 +1,5 @@
 - name: Create azure VM
-  azure_rm_virtualmachine:
+  azure.azcollection.azure_rm_virtualmachine:
     resource_group: {{ vm_resource_goup_name }}
     name: {{ vm_name }}
     admin_username: "{{ vm_admin_username }}"
