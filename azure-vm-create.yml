@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: azure
   become: no
   vars:
     environment: azure
